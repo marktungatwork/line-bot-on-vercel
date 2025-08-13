@@ -1,0 +1,10 @@
+{
+  "name": "line-bot-on-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "main": "api/webhook.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
