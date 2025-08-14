@@ -6,9 +6,6 @@ const CHANNEL_SECRET = process.env.LINE_CHANNEL_SECRET;
 const ACCESS_TOKEN   = process.env.LINE_ACCESS_TOKEN;
 
 module.exports = async (req, res) => {
-    // 讓瀏覽器 GET /api/webhook 也能看到 OK（debug 用）
-  if (req.method === 'GET') return res.status(200).send('OK (Webhooks are up)');
-
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   // collect raw body for signature verification
