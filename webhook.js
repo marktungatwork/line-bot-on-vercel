@@ -7,10 +7,7 @@ const ACCESS_TOKEN   = process.env.LINE_ACCESS_TOKEN;
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  
-    // 讓瀏覽器用 GET 測試也能看到 OK（正式用 POST）
-  if (req.method === 'GET') return res.status(200).send('OK (Webhooks are up)');
-  
+
   // collect raw body for signature verification
   const chunks = [];
   for await (const chunk of req) chunks.push(chunk);
